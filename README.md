@@ -224,6 +224,7 @@ touches the Keychain, so it never asks.
 | Key | Where to get it | What it unlocks |
 |---|---|---|
 | **Anthropic (Claude)** | [console.anthropic.com](https://console.anthropic.com) | The AI features: summaries, synthesis, Explain, the assistant |
+| **OpenRouter** (alternative to Anthropic) | [openrouter.ai/keys](https://openrouter.ai/keys) | The same AI features, through OpenRouter. Pick it under AI provider in Settings; the models it asks for can be changed to any other model on OpenRouter |
 | **NCBI / PubMed** | [ncbi.nlm.nih.gov/account](https://ncbi.nlm.nih.gov/account) | A higher PubMed rate limit (10 requests a second instead of 3) |
 | **Scopus** | [dev.elsevier.com](https://dev.elsevier.com) | Scopus as a source |
 | **Web of Science** | [developer.clarivate.com](https://developer.clarivate.com) | Web of Science as a source |
@@ -279,6 +280,11 @@ one of them in as the first.
 
 ## What the AI costs
 
+The AI features talk to Anthropic by default. In **Settings ▸ AI provider** they can talk to
+OpenRouter instead: both answer the same requests, and the key of the provider picked is the
+one that is used, while the other key, if there is one, stays saved. Under OpenRouter the
+two models MedSearch asks for can be changed to any other model on OpenRouter.
+
 The one-line summaries use the smallest Claude model, the assistant reuses a cached,
 trimmed context from one question to the next, and every answer is capped. A typical
 conversation with the assistant costs a few cents.
@@ -289,7 +295,8 @@ reports, broken down by what was asked of it. A **monthly limit** can be switche
 it: once the month's spending reaches it, the AI features stop and say so, and searching
 carries on untouched (a limit of $0 means no AI at all). For a limit that MedSearch itself
 cannot exceed, give the machine its own API key in its own Anthropic console workspace and
-set the spend limit there.
+set the spend limit there. When OpenRouter is the provider in use, the figure counted is
+the one OpenRouter itself reports for each call.
 
 ## Privacy
 
@@ -298,7 +305,8 @@ Everything runs on your machine. Searches, keys, history and saved searches stay
 the literature services you search (including OpenAlex, for the suggestions while you type
 an author or institution, WorldCat when you look for a book in a library, and your
 library's catalogue when you ask it for a book) and, with AI
-on, to the Anthropic API. The email address set for Unpaywall goes to Unpaywall, Crossref,
+on, to the Anthropic API, or to OpenRouter instead when that is the provider in use. The
+email address set for Unpaywall goes to Unpaywall, Crossref,
 NCBI and Open Library, as the contact they ask apps for, and nowhere else.
 
 ---

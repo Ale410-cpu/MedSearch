@@ -6,6 +6,7 @@ one line per change, in plain words, no internals.
 
 ## 2.4
 
+- The AI can be used through OpenRouter as well as Anthropic: pick the one you want in Settings and paste its key. Both answer the same requests, and the OpenRouter models can be changed to any other model on OpenRouter.
 - Zotero without the Zotero app: add a Zotero API key in Settings, and Send to Zotero saves straight into your online library whenever the Zotero app isn't open. The items appear in the app at its next sync.
 - Every API key in Settings has a line or two on how to get it, with a link straight to the right page.
 - The AI tab in the bottom bar: the switch that turns the AI features on or off, what they have cost this month and the monthly limit, all in one place.
